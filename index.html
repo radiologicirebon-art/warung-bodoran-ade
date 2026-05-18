@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Warbod - Warung Ade</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root {
@@ -1260,7 +1261,7 @@ function renderSupplier(search='') {
   el('supplierBody').innerHTML = list.map((s,i) => `<tr>
     <td>${i+1}</td><td><strong>${s.nama}</strong></td><td>${s.telp||'-'}</td>
     <td>${s.alamat||'-'}</td>
-    <td style="color:${s.hutang>0?'var(--danger)':'var(--success)';}">${rp(s.hutang||0)}</td>
+    <td style="color:${s.hutang>0?'var(--danger)':'var(--success)'}">${rp(s.hutang||0)}</td>
     <td><div style="display:flex;gap:6px">
       <button class="btn btn-sm btn-ghost" onclick="editSupplier('${s.id}')"><i class="fas fa-edit"></i></button>
       <button class="btn btn-sm btn-danger" onclick="deleteSupplier('${s.id}')"><i class="fas fa-trash"></i></button>
